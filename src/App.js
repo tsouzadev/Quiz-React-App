@@ -1,11 +1,11 @@
 import React from "react";
 
-import QuizStyled from "./components/QuizEnhanced";
+import Quiz from "./components/Quiz";
 
 function App() {
   return (
     <div>
-      <QuizStyled />
+      <Quiz />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-
-import "./QuizStyled.css";
+import "./Quiz.css";
+import QuizSummary from "./QuizSummary";
 import messagingServiceQuestions from "../questions/questions-messaging-services-selection.json";
 import serviceBusQuestions from "../questions/questions-service-bus.json";
 import storageAccountQuestions from "../questions/questions-storage-accounts.json";
 import storageQueueQuestions from "../questions/questions-storage-queues.json";
 
-const QuizStyled = () => {
+const Quiz = () => {
   const initialQuizData = [
     ...messagingServiceQuestions,
     ...serviceBusQuestions,
@@ -26,6 +26,7 @@ const QuizStyled = () => {
     // Shuffle the quiz data when the component mounts
     const shuffledQuizData = shuffleArray(initialQuizData);
     setQuizData(shuffledQuizData);
+    setUserAnswers(Array(shuffledQuizData.length).fill(null));
   }, []);
 
   const handleOptionChange = (e) => {
@@ -36,11 +37,13 @@ const QuizStyled = () => {
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestion < quizData.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      calculateScore();
-      setQuizCompleted(true);
+    if (userAnswers[currentQuestion] !== null) {
+      if (currentQuestion < quizData.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        calculateScore();
+        setQuizCompleted(true);
+      }
     }
   };
 
@@ -84,7 +87,13 @@ const QuizStyled = () => {
               </div>
             ))}
           </form>
-          <button className="next-button" onClick={handleNextQuestion}>
+          <button
+            className={`next-button ${
+              userAnswers[currentQuestion] === null ? "disabled" : ""
+            }`}
+            onClick={handleNextQuestion}
+            disabled={userAnswers[currentQuestion] === null}
+          >
             Next
           </button>
         </div>
@@ -94,21 +103,7 @@ const QuizStyled = () => {
         <div className="results-container">
           <h2 className="results-heading">Quiz Completed!</h2>
           <p className="score-text">Your Score: {score.toFixed(2)}%</p>
-          <h3 className="results-subheading">Results:</h3>
-          <ul className="answers-list">
-            {quizData.map((question, index) => (
-              <li key={index} className="answer-item">
-                <p className="question">{question.question}</p>
-                <p className="selected-answer">
-                  Your Answer: {quizData[index].options[userAnswers[index]]}
-                </p>
-                <p className="correct-answer">
-                  Correct Answer:{" "}
-                  {quizData[index].options[question.correct_answer]}
-                </p>
-              </li>
-            ))}
-          </ul>
+          <QuizSummary quizData={quizData} userAnswers={userAnswers} />
           <button className="restart-button" onClick={restartQuiz}>
             Restart Quiz
           </button>
@@ -138,4 +133,4 @@ const QuizStyled = () => {
   );
 };
 
-export default QuizStyled;
+export default Quiz;
