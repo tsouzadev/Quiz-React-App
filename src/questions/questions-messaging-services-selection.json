@@ -97,5 +97,16 @@
     ],
     "correct_answer": 3,
     "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service should be used if we need to guarantee at-most-once behavior for a message consumption?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 1,
+    "category": "Messaging Services"
   }
 ]

@@ -228,7 +228,7 @@
     "category": "Azure Service Bus"
   },
   {
-    "category": "Azure Message Bus",
+    "category": "Azure Service Bus",
     "question": "What are the components of a Service Bus message?",
     "options": [
       "Payload and metadata",
@@ -239,7 +239,7 @@
     "correct_answer": 0
   },
   {
-    "category": "Azure Message Bus",
+    "category": "Azure Service Bus",
     "question": "In Service Bus, how are messages routed to specific destinations in the simple request/reply pattern?",
     "options": [
       "Using the MessageId property",
@@ -250,7 +250,7 @@
     "correct_answer": 2
   },
   {
-    "category": "Azure Message Bus",
+    "category": "Azure Service Bus",
     "question": "Which feature allows several publishers to share a reply queue in Service Bus?",
     "options": [
       "Multiplexing",
@@ -261,7 +261,7 @@
     "correct_answer": 0
   },
   {
-    "category": "Azure Message Bus",
+    "category": "Azure Service Bus",
     "question": "Which Service Bus protocol serializes objects into an AMQP object?",
     "options": [
       "SBMP protocol",
@@ -272,7 +272,7 @@
     "correct_answer": 1
   },
   {
-    "category": "Azure Message Bus",
+    "category": "Azure Service Bus",
     "question": "Which property is reserved for future use in Service Bus message routing?",
     "options": [
       "To property",
@@ -283,7 +283,7 @@
     "correct_answer": 0
   },
   {
-    "category": "Azure Message Bus",
+    "category": "Azure Service Bus",
     "question": "How does routing across Service Bus namespaces usually occur?",
     "options": [
       "Using autoforward chaining",
@@ -292,5 +292,122 @@
       "Using user properties"
     ],
     "correct_answer": 2
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "When working with topic and subscription which artifact holds a dead-letter queue",
+    "options": ["Topic", "Publisher", "Subscription", "Receiver"],
+    "correct_answer": 2
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What happens when a message exceeds the maximum delivery count?",
+    "options": [
+      "It is implicitly sent to the dead-letter queue",
+      "It is explicitly sent to the dead-letter queue",
+      "It is deleted",
+      "It is picked up by another subscription"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "Who is responsible for explicitly dead-lettering?",
+    "options": [
+      "The messaging service",
+      "The application message handler",
+      "The user",
+      "The publisher"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What is the default value for maximum delivery count?",
+    "options": ["5", "10", "0", "30"],
+    "correct_answer": 1
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What happens to expired messages?",
+    "options": [
+      "It is implicitly sent to the dead-letter queue",
+      "It is explicitly sent to the dead-letter queue",
+      "It is deleted",
+      "It stays in the subscription main queue"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "How to explicity dead-letter a message?",
+    "options": [
+      "Receiver should call DeleteMessageAsync",
+      "Set the configuration to automatic dead letter explicitly",
+      "Receiver should call DeadLetterMessageAsync",
+      "Publisher should call SendMessageToDeadLetterQueueAsync"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What two properties are added to the dead-letter a message?",
+    "options": [
+      "DeadLettered and DeadLetterFailureReason are added to the message body",
+      "DeadLetterReason and DeadLetterErrorDescription are added to the message properties",
+      "DeadLettered and DeadLetterFailureReason are added to the message properties",
+      "DeadLetterReason and DeadLetterErrorDescription are added to the message body"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What is the mazimum size of a service bus queue?",
+    "options": ["1GB", "100MB", "80MB", "80GB"],
+    "correct_answer": 3
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What happens when AbandonMessageAsync is called?",
+    "options": [
+      "Message is deleted from the queue",
+      "Message is dead-lettered",
+      "Message is sent back to the queue for retrying",
+      "Message is forwarded to the error handling queue"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What happens when AbandonMessageAsync is called?",
+    "options": [
+      "Message is deleted from the queue",
+      "Message is dead-lettered",
+      "Message is sent back to the queue for retrying",
+      "Message is forwarded to the error handling queue"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What is a poison message?",
+    "options": [
+      "It is any message in the dead-letter queue",
+      "It is a message whose content cannot be processed",
+      "It is a message tagged with poison",
+      "It is a message that is forwarded to the poison queue"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "category": "Azure Service Bus",
+    "question": "What is the advantage of taking control of message dead-lettering making it explicit?",
+    "options": [
+      "You can set the reason and error descriptions properties with meaningful information",
+      "You can remove the overhead from implicit dead-lettering",
+      "You avoid over configuration of the service bus",
+      "None, applications should always make implicit dead-lettering."
+    ],
+    "correct_answer": 0
   }
 ]

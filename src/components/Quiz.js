@@ -5,13 +5,15 @@ import messagingServiceQuestions from "../questions/questions-messaging-services
 import serviceBusQuestions from "../questions/questions-service-bus.json";
 import storageAccountQuestions from "../questions/questions-storage-accounts.json";
 import storageQueueQuestions from "../questions/questions-storage-queues.json";
+import eventHubQuestions from "../questions/questions-event-hub.json";
 
 const Quiz = () => {
   const initialQuizData = [
     ...messagingServiceQuestions,
-    // ...serviceBusQuestions,
+    ...serviceBusQuestions,
     ...storageAccountQuestions,
-    // ...storageQueueQuestions,
+    ...storageQueueQuestions,
+    ...eventHubQuestions,
   ];
 
   const [quizData, setQuizData] = useState([]);
@@ -101,8 +103,6 @@ const Quiz = () => {
     } else {
       return (
         <div className="results-container">
-          <h2 className="results-heading">Quiz Completed!</h2>
-          <p className="score-text">Your Score: {score.toFixed(2)}%</p>
           <QuizSummary quizData={quizData} userAnswers={userAnswers} />
           <button className="restart-button" onClick={restartQuiz}>
             Restart Quiz

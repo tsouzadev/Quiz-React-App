@@ -1,0 +1,173 @@
+[
+  {
+    "question": "What is the default message retention time in Azure Event Hub?",
+    "options": ["30 minutes", "1 hour", "1 day", "10 days"],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the maximum message retention time in Azure Event Hub?",
+    "options": ["30 days", "7 days", "1 day", "10 days"],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the main use case of Azure Event Hub?",
+    "options": [
+      "Ingestion of low volume messages from Azure services",
+      "Ingestion of high volume events from many different sources",
+      "Ingestion of high volume messages from many different sources",
+      "Connecting full duplex communication between two cloud providers"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What are the two protocols supported by Azure Event Hub?",
+    "options": [
+      "HTTPS and AMQP",
+      "AMQP and MQTT",
+      "HTTPS ans MQTT",
+      "All of above"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How many concurrent AMQP connections are supported by Azure Event Hub?",
+    "options": ["5 Million", "1 Million", "1 Thousand", "5 Thousand"],
+    "correct_answer": 3,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How many event hubs can a event hub namespace contain?",
+    "options": ["1", "5", "10", "30"],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How much capacity can 1 throughput unit handle?",
+    "options": [
+      "1 MB/s or 1000 events/s ingress and 2 MB/s or 2000 events/s egress",
+      "2 MB/s or 2000 events/s ingress and 2 MB/s or 2000 events/s egress",
+      "2 MB/s or 2000 events/s ingress and 1 MB/s or 1000 events/s egress",
+      "10 MB/s or 10000 events/s ingress and 10 MB/s or 10000 events/s egress"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "A throughput is defined in the event hub namespace and is shared among contained event hubs?",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "Auto-inflate is defined in the event hub namespace?",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What happens when senders send more than the throughput capacity of an event hub without auto-inflate?",
+    "options": [
+      "Throughput capacity will automatically adjusted to handle capacity.",
+      "Senders will be throttled, receiving errors.",
+      "Event hub will buffer the messages in a storage queue.",
+      "Senders will automatically blocked by event hub for a predefined period"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the maximum throughput units configured to an event hub namespace?",
+    "options": ["5", "10", "20", "100"],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the default throughput units configured to an event hub namespace?",
+    "options": ["5", "10", "20", "1"],
+    "correct_answer": 3,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "A throughput unit will be shared among contained event hubs evenly in a fixed amount even if they are not being used?",
+    "options": ["True", "False"],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "Auto-inflate will decrease the throughput units after the load is reduced?",
+    "options": ["True", "False"],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "One can have more than 20 throughput units by submitting a support ticket?",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is an event hub partition?",
+    "options": [
+      "It is a container that helps paralelize consumption of events",
+      "It is a special container that uses a user defined logic for processing events"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How the events are distributed among partitions?",
+    "options": [
+      "According to configured filters",
+      "Prioritize the one with less load",
+      "Round robin",
+      "Randomly"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the default value and minimum number of partitions an event hub can have?",
+    "options": [
+      "1 is the default and minimum number of partitions",
+      "2 is the default and minimum number of partitions",
+      "2 is the default and 1 is the minimum number of partitions",
+      "1 is the default and 2 is the minimum number of partitions"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "New events are added to the end of a partition?",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "The number of partitions are defined in the event hub namespace?",
+    "options": ["True", "False, it is defined in the event hub."],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How many GB storage per day is included in 1 throughput unit?",
+    "options": ["1 GB", "10 GB", "84 GB", "100 GB"],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "The number of partitions can be changed after event hub creation?",
+    "options": ["True", "False"],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "The number of partitions should be proportional to the number of concurrent consumers?",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  }
+]
