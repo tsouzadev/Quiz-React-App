@@ -1,79 +1,95 @@
-.results-container {
-  padding: 20px;
+.summary-container {
+  text-align: center;
 }
 
-.overall-score {
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+.overall-score-container {
+  margin-bottom: 40px;
 }
 
-.score-text {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.review-toggle {
-  background-color: #eaeaea;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.category-scores {
+.score-heading {
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-.category-heading {
-  font-size: 20px;
+.score-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
-.category-score-text {
-  font-size: 16px;
-  margin-bottom: 5px;
+.score-label {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.category-percentage {
-  font-size: 16px;
+.score-value {
   font-weight: bold;
 }
 
-.question-results {
-  display: none;
+.chart-container {
   margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.question-results.show {
-  display: block;
+.category-scores-container {
+  margin-bottom: 40px;
 }
 
-.answer-item {
+.category-name {
+  font-size: 18px;
+  font-weight: bold;
   margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.correct-answer {
-  background-color: #d4edda;
-}
-
-.wrong-answer {
-  background-color: #f8d7da;
 }
 
 .restart-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  font-size: 18px;
   padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 .restart-button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
+}
+
+/* Styling for the donut chart */
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.doughnut-legend {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.doughnut-legend-item {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.doughnut-legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.doughnut-legend-label {
+  display: inline-block;
+  vertical-align: middle;
 }

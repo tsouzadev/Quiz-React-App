@@ -9,39 +9,24 @@ import storageQueueQuestions from "../questions/questions-storage-queues.json";
 const QuizStyled = () => {
   const initialQuizData = [
     ...messagingServiceQuestions,
-    // ...serviceBusQuestions,
+    ...serviceBusQuestions,
     ...storageAccountQuestions,
-    // ...storageQueueQuestions,
+    ...storageQueueQuestions,
   ];
 
   const [quizData, setQuizData] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState(
-    Array(initialQuizData.length).fill(null)
+    Array(quizData.length).fill(null)
   );
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
-  const [categoryScores, setCategoryScores] = useState({});
 
   useEffect(() => {
     // Shuffle the quiz data when the component mounts
     const shuffledQuizData = shuffleArray(initialQuizData);
     setQuizData(shuffledQuizData);
-
-    // Initialize category scores
-    const categories = [
-      ...new Set(shuffledQuizData.map((question) => question.category)),
-    ];
-    const initialCategoryScores = {};
-    categories.forEach((category) => {
-      initialCategoryScores[category] = {
-        correctAnswers: 0,
-        totalQuestions: shuffledQuizData.filter(
-          (question) => question.category === category
-        ).length,
-      };
-    });
-    setCategoryScores(initialCategoryScores);
+    setUserAnswers(Array(shuffledQuizData.length).fill(null));
   }, []);
 
   const handleOptionChange = (e) => {
@@ -52,27 +37,25 @@ const QuizStyled = () => {
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestion < quizData.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      calculateScore();
-      setQuizCompleted(true);
+    if (userAnswers[currentQuestion] !== null) {
+      if (currentQuestion < quizData.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        calculateScore();
+        setQuizCompleted(true);
+      }
     }
   };
 
   const calculateScore = () => {
     let correctAnswers = 0;
-    const updatedCategoryScores = { ...categoryScores };
     userAnswers.forEach((answer, index) => {
       if (answer === quizData[index].correct_answer) {
         correctAnswers++;
-        const category = quizData[index].category;
-        updatedCategoryScores[category].correctAnswers += 1;
       }
     });
     const calculatedScore = (correctAnswers / quizData.length) * 100;
     setScore(calculatedScore);
-    setCategoryScores(updatedCategoryScores);
   };
 
   const restartQuiz = () => {
@@ -104,20 +87,27 @@ const QuizStyled = () => {
               </div>
             ))}
           </form>
-          <button className="next-button" onClick={handleNextQuestion}>
+          <button
+            className={`next-button ${
+              userAnswers[currentQuestion] === null ? "disabled" : ""
+            }`}
+            onClick={handleNextQuestion}
+            disabled={userAnswers[currentQuestion] === null}
+          >
             Next
           </button>
         </div>
       );
     } else {
       return (
-        <QuizSummary
-          quizData={quizData}
-          userAnswers={userAnswers}
-          categoryScores={categoryScores}
-          score={score}
-          restartQuiz={restartQuiz}
-        />
+        <div className="results-container">
+          <h2 className="results-heading">Quiz Completed!</h2>
+          <p className="score-text">Your Score: {score.toFixed(2)}%</p>
+          <QuizSummary quizData={quizData} userAnswers={userAnswers} />
+          <button className="restart-button" onClick={restartQuiz}>
+            Restart Quiz
+          </button>
+        </div>
       );
     }
   };

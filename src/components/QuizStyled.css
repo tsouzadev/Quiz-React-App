@@ -52,6 +52,11 @@
   background-color: #0056b3;
 }
 
+.next-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .results-container {
   margin-top: 40px;
 }
