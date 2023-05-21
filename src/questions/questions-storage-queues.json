@@ -1,0 +1,135 @@
+[
+  {
+    "question": "What is Azure Storage Queue?",
+    "options": [
+      "A message broker service",
+      "A relational database service",
+      "A file storage service",
+      "A machine learning service"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "Which protocol is used by Azure Storage Queue?",
+    "options": ["HTTP", "HTTPS", "TCP", "FTP"],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "How do you authenticate access to Azure Storage Queue?",
+    "options": [
+      "Using Azure AD authentication",
+      "Using OAuth authentication",
+      "Using API keys",
+      "Using username and password"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What is the maximum size of a message that can be stored in Azure Storage Queue?",
+    "options": ["64 KB", "256 KB", "1 MB", "10 MB"],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What is the purpose of the \"Message ID\" property in an Azure Storage Queue message?",
+    "options": [
+      "It uniquely identifies a message within a queue",
+      "It indicates the time when the message was enqueued",
+      "It determines the maximum time a message can remain in the queue",
+      "It specifies the visibility timeout for the message"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "Which Azure Storage Queue feature allows you to set a maximum number of times a message can be dequeued?",
+    "options": [
+      "Time-to-Live (TTL)",
+      "Maximum Dequeue Count",
+      "Message Retention Policy",
+      "Visibility Timeout"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "Which of the following is NOT a valid operation on an Azure Storage Queue?",
+    "options": [
+      "Enqueue a message",
+      "Dequeue a message",
+      "Peek at the next message",
+      "Delete a message"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What happens to messages in an Azure Storage Queue after they are dequeued?",
+    "options": [
+      "They are permanently deleted",
+      "They are moved to a separate \"Dead Letter Queue\"",
+      "They are hidden from other consumers for a specified duration",
+      "They are marked as processed but remain in the queue"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What is the purpose of the \"Dequeue Count\" property in an Azure Storage Queue message?",
+    "options": [
+      "It indicates the number of times a message has been dequeued",
+      "It determines the maximum time a message can remain in the queue",
+      "It represents the time when the message was enqueued",
+      "It specifies the visibility timeout for the message"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "Which of the following is a valid scenario for using Azure Storage Queues?",
+    "options": [
+      "Real-time stream processing",
+      "Long-term data storage",
+      "Relational data querying",
+      "Message-driven workflows"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What is the purpose of the \"Time-to-Live (TTL)\" property in an Azure Storage Queue message?",
+    "options": [
+      "It determines the maximum time a message can remain in the queue",
+      "It represents the time when the message was dequeued",
+      "It specifies the visibility timeout for the message",
+      "It indicates the total number of messages in the queue"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What is the purpose of the \"Message Retention Policy\" for an Azure Storage Queue?",
+    "options": [
+      "It determines the maximum time a message can remain in the queue",
+      "It indicates the number of times a message has been dequeued",
+      "It represents the time when the message was enqueued",
+      "It specifies the visibility timeout for the message"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Queues"
+  },
+  {
+    "question": "What is the purpose of the \"Visibility Timeout\" property in Azure Storage Queues?",
+    "options": [
+      "It determines the maximum time a message can remain in the queue",
+      "It represents the time when the message was dequeued",
+      "It specifies the delay before a message is made visible again after being dequeued",
+      "It indicates the total number of messages in the queue"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Queues"
+  }
+]

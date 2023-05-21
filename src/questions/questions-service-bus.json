@@ -1,0 +1,296 @@
+[
+  {
+    "question": "Which of the following options correctly identifies the two types of filters commonly used in a subscription?",
+    "options": [
+      "Content Filters and Notification Filters.",
+      "SQL Filters and Correlation Filters.",
+      "Text Filters and Numeric Filters.",
+      "Inclusion Filters and Exclusion Filters."
+    ],
+    "correct_answer": 1,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the primary use case for utilizing a SQL filter in Azure Service Bus topic subscriptions?",
+    "options": [
+      "Filtering messages based on their correlation ID.",
+      "Routing messages based on their timestamp.",
+      "Matching specific message properties using SQL-like expressions.",
+      "Filtering messages based on their message label."
+    ],
+    "correct_answer": 2,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What does property promotion refer to in Azure Service Bus?",
+    "options": [
+      "The extraction and promotion of message bodies to message properties.",
+      "The extraction and promotion of user-defined properties from the message body to message properties.",
+      "The extraction and promotion of system-defined properties from the message body to message properties.",
+      "The extraction and promotion of message properties to the message body."
+    ],
+    "correct_answer": 1,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the use case for property promotion in Azure Service Bus?",
+    "options": [
+      "Allow filter and routing of messages based on message properties promoted from the message body",
+      "Allow filter and routing of messages based on message properties promoted from the system",
+      "Expose relevant properties from the system to the body.",
+      "Expose relevant properties from the body to the system properties."
+    ],
+    "correct_answer": 0,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which system property is used to correlate messages in Azure Service Bus?",
+    "options": ["from", "to", "correlationId", "sessionId"],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is Azure Service Bus?",
+    "options": [
+      "A cloud-based messaging service",
+      "A relational database service",
+      "A machine learning platform",
+      "A content delivery network"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which messaging patterns does Azure Service Bus support?",
+    "options": [
+      "Publish/Subscribe",
+      "Request/Reply",
+      "Both Publish/Subscribe and Request/Reply",
+      "None of the above"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the maximum size of a message that can be sent via Azure Service Bus?",
+    "options": ["1 MB", "10 MB", "100 MB", "1 GB"],
+    "correct_answer": 2,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which programming language can be used with Azure Service Bus?",
+    "options": ["C#", "Java", "Python", "All of the above"],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the primary protocol used by Azure Service Bus?",
+    "options": ["HTTP", "HTTPS", "AMQP", "MQTT"],
+    "correct_answer": 2,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature allows you to schedule messages for future delivery?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Scheduled Messages"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the purpose of the Dead-letter Queue in Azure Service Bus?",
+    "options": [
+      "To store undeliverable messages",
+      "To prioritize certain messages",
+      "To delay the visibility of messages",
+      "To provide a backup for messages"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature allows you to automatically forward messages from one queue or topic to another?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Scheduled Messages"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the role of a Service Bus Namespace in Azure Service Bus?",
+    "options": [
+      "To define access control policies",
+      "To organize queues and topics",
+      "To specify the message size limit",
+      "To configure auto-scaling settings"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature allows you to filter messages based on properties?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Message Filtering"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature provides first-in, first-out (FIFO) message delivery?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Session State"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the maximum duration for which a message can be locked in Azure Service Bus?",
+    "options": ["1 minute", "5 minutes", "10 minutes", "30 minutes"],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature allows you to automatically forward dead-lettered messages to another entity?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Scheduled Messages"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the recommended way to authenticate and authorize access to Azure Service Bus?",
+    "options": [
+      "Shared Access Signatures (SAS)",
+      "Username and password",
+      "API keys",
+      "Bearer tokens"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature provides duplicate message detection?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Duplicate Detection"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature allows you to send batches of messages in a single request?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Batching"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "What is the purpose of the SessionId property in Azure Service Bus?",
+    "options": [
+      "To specify the priority of a message",
+      "To group related messages together",
+      "To set the time-to-live (TTL) for a message",
+      "To indicate the sequence number of a message"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Service Bus"
+  },
+  {
+    "question": "Which Azure Service Bus feature allows you to delay the delivery of messages?",
+    "options": [
+      "Message Locking",
+      "Dead-lettering",
+      "Auto-forwarding",
+      "Scheduled Messages"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Service Bus"
+  },
+  {
+    "category": "Azure Message Bus",
+    "question": "What are the components of a Service Bus message?",
+    "options": [
+      "Payload and metadata",
+      "Metadata and handling instructions",
+      "Payload and handling instructions",
+      "Metadata and payload description"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "category": "Azure Message Bus",
+    "question": "In Service Bus, how are messages routed to specific destinations in the simple request/reply pattern?",
+    "options": [
+      "Using the MessageId property",
+      "Using the CorrelationId property",
+      "Using the ReplyTo property",
+      "Using the To property"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "category": "Azure Message Bus",
+    "question": "Which feature allows several publishers to share a reply queue in Service Bus?",
+    "options": [
+      "Multiplexing",
+      "Message routing",
+      "Payload serialization",
+      "Session handling"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "category": "Azure Message Bus",
+    "question": "Which Service Bus protocol serializes objects into an AMQP object?",
+    "options": [
+      "SBMP protocol",
+      "AMQP protocol",
+      "HTTP protocol",
+      "Binary protocol"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "category": "Azure Message Bus",
+    "question": "Which property is reserved for future use in Service Bus message routing?",
+    "options": [
+      "To property",
+      "From property",
+      "Subject property",
+      "CorrelationId property"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "category": "Azure Message Bus",
+    "question": "How does routing across Service Bus namespaces usually occur?",
+    "options": [
+      "Using autoforward chaining",
+      "Using topic subscription rules",
+      "Using Azure LogicApps",
+      "Using user properties"
+    ],
+    "correct_answer": 2
+  }
+]

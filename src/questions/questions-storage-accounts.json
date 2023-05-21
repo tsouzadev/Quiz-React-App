@@ -1,0 +1,190 @@
+[
+  {
+    "question": "What are the four data services grouped together under Azure Storage?",
+    "options": [
+      "Azure SQL Database, Azure Cosmos DB, Azure Queues, and Azure Tables",
+      "Azure Blobs, Azure Files, Azure Queues, and Azure Tables",
+      "Azure Queues, Azure Tables, Azure Files, and Azure Cosmos DB",
+      "Azure Blobs, Azure Queues, Azure Tables, and Azure SQL Database"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "Which of the following is NOT a storage service that can be included in a storage account?",
+    "options": [
+      "Azure Blobs",
+      "Azure Files",
+      "Azure SQL Database",
+      "Azure Queues"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What is the purpose of combining data services into a single storage account?",
+    "options": [
+      "To simplify billing for different services",
+      "To enable independent management of each service",
+      "To ensure data replication across multiple datacenters",
+      "To restrict access to specific virtual networks"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "Which of the following is NOT a setting defined by a storage account?",
+    "options": ["Subscription", "Performance", "Location", "Database type"],
+    "correct_answer": 3,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "Which access tier provides quicker access to blobs in a storage account?",
+    "options": ["Hot", "Cool", "Premium", "Standard"],
+    "correct_answer": 0,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What is the minimum replication strategy provided by Azure for data stored in a storage account?",
+    "options": [
+      "Locally redundant storage (LRS)",
+      "Geo-redundant storage (GRS)",
+      "Premium storage",
+      "Standard storage"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What security feature determines the supported protocols for access to a storage account?",
+    "options": [
+      "Subscription owner",
+      "Virtual networks",
+      "Secure transfer required",
+      "Replication strategy"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "How does data diversity impact the number of storage accounts needed?",
+    "options": [
+      "Increased data diversity leads to a decreased number of storage accounts.",
+      "Data diversity has no impact on the number of storage accounts needed.",
+      "Increased data diversity leads to an increased number of storage accounts.",
+      "Data diversity only impacts the replication strategy, not the number of storage accounts."
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "Which factor influences the cost of services in a storage account?",
+    "options": [
+      "Subscription owner",
+      "Location",
+      "Performance",
+      "Data diversity"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "How can multiple storage accounts help reduce costs?",
+    "options": [
+      "By enabling virtual networks for all data",
+      "By choosing premium performance for all data",
+      "By using locally redundant storage for all data",
+      "By partitioning data into different accounts based on criticality"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What is the impact of creating multiple storage accounts on management overhead?",
+    "options": [
+      "It reduces management overhead by consolidating settings.",
+      "It increases complexity for administrators and data contributors.",
+      "It simplifies the process of adding data to cloud storage.",
+      "It eliminates the need for administrator involvement."
+    ],
+    "correct_answer": 1,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What is the recommended strategy for determining the number of storage accounts?",
+    "options": [
+      "Start with an analysis of data and create one storage account for each individual item.",
+      "Create a single storage account for all data to minimize costs.",
+      "Partition data based on characteristics and create one storage account for each partition.",
+      "Use the default settings of Azure Storage without creating separate storage accounts."
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "When might you need separate storage accounts based on data diversity?",
+    "options": [
+      "When data is stored in multiple Azure datacenters across the world",
+      "When data is consumed by different geographical regions",
+      "When data is stored in a single region or country",
+      "When data is stored in Azure SQL Database and Azure Cosmos DB"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "How does the replication strategy impact the number of storage accounts needed?",
+    "options": [
+      "The replication strategy has no impact on the number of storage accounts needed.",
+      "The replication strategy determines the number of storage accounts needed.",
+      "The replication strategy only impacts the performance of storage accounts.",
+      "The replication strategy determines the billing options for storage accounts."
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What is the purpose of using virtual networks in relation to storage accounts?",
+    "options": [
+      "To reduce the cost of storage services",
+      "To enable faster access to blobs in a storage account",
+      "To restrict inbound access requests to specified virtual networks",
+      "To determine the subscription owner for storage services"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "What are the three settings that apply to the storage account itself?",
+    "options": [
+      "Location, Performance, Replication",
+      "Name, Deployment model, Account kind",
+      "Subscription, Access tier, Virtual networks",
+      "Blob, File, Queue"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "Which deployment models does Azure offer for organizing resources?",
+    "options": [
+      "Resource Manager and Classic",
+      "Standard and Premium",
+      "General purpose v2 and Block blobs",
+      "Page blobs and File shares"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Storage Accounts"
+  },
+  {
+    "question": "Which account kind is recommended by Microsoft for new storage accounts?",
+    "options": [
+      "Premium - Page blobs",
+      "Premium - Block blobs",
+      "Premium - File shares",
+      "Standard - StorageV2 (general purpose v2)"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Storage Accounts"
+  }
+]

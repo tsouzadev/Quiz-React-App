@@ -1,0 +1,101 @@
+[
+  {
+    "question": "Which Azure messaging service is most suitable for reliable and persistent message queuing, with support for ordered delivery and dead-lettering capabilities?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 1,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service provides publish/subscribe messaging patterns, advanced message filtering, and support for transactions and sessions?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 1,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service is designed for high-throughput, real-time ingestion of streaming data from multiple sources?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 2,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service is best suited for event-driven architectures, delivering events to subscribers with webhook or event handler endpoints?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 3,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service is recommended for sending push notifications to mobile devices and providing a scalable message routing infrastructure?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 3,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service is suitable for storing large volumes of unstructured data, with support for time-based retention and automatic tiering?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 0,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service provides a message-based communication model for decoupling components and integrating applications, supporting message sessions and duplicate detection?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 1,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service is well-suited for processing and analyzing streaming data, with support for complex event processing and integration with big data analytics services?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 2,
+    "category": "Messaging Services"
+  },
+  {
+    "question": "Which Azure messaging service is primarily used for handling and processing cloud events with a publish/subscribe model, offering serverless event routing and filtering capabilities?",
+    "options": [
+      "Azure Storage Queue",
+      "Azure Service Bus",
+      "Azure Event Hub",
+      "Azure Event Grid"
+    ],
+    "correct_answer": 3,
+    "category": "Messaging Services"
+  }
+]
