@@ -43,35 +43,33 @@ const QuizSummary = ({ quizData, userAnswers }) => {
       <div className="category-score" key={index}>
         <div className="category-header" onClick={() => toggleReview(category)}>
           <h3 className="category-title">{category}</h3>
+          <p className="category-result">
+            Correct: {score.correctAnswers} / {score.totalQuestions}
+          </p>
           <button className="review-toggle-button">
             {showReviews[category] ? "Hide Questions" : "Review Questions"}
           </button>
         </div>
         {showReviews[category] && (
-          <>
-            <p className="category-result">
-              Correct: {score.correctAnswers} / {score.totalQuestions}
-            </p>
-            <ul className="questions-list">
-              {score.questions.map((question, index) => (
-                <li key={index} className="question-item">
-                  <p
-                    className={`question ${
-                      question.isCorrect ? "correct" : "incorrect"
-                    }`}
-                  >
-                    {question.question}
-                  </p>
-                  <p className="selected-answer">
-                    Your Answer: {question.userAnswer}
-                  </p>
-                  <p className="correct-answer">
-                    Correct Answer: {question.correctAnswer}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </>
+          <ul className="questions-list">
+            {score.questions.map((question, index) => (
+              <li key={index} className="question-item">
+                <p
+                  className={`question ${
+                    question.isCorrect ? "correct" : "incorrect"
+                  }`}
+                >
+                  {question.question}
+                </p>
+                <p className="selected-answer">
+                  Your Answer: {question.userAnswer}
+                </p>
+                <p className="correct-answer">
+                  Correct Answer: {question.correctAnswer}
+                </p>
+              </li>
+            ))}
+          </ul>
         )}
       </div>
     ));

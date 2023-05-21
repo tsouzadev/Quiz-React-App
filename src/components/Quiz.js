@@ -9,9 +9,9 @@ import storageQueueQuestions from "../questions/questions-storage-queues.json";
 const Quiz = () => {
   const initialQuizData = [
     ...messagingServiceQuestions,
-    ...serviceBusQuestions,
+    // ...serviceBusQuestions,
     ...storageAccountQuestions,
-    ...storageQueueQuestions,
+    // ...storageQueueQuestions,
   ];
 
   const [quizData, setQuizData] = useState([]);
