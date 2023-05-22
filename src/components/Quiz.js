@@ -1,35 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./Quiz.css";
 import QuizSummary from "./QuizSummary";
-import messagingServiceQuestions from "../questions/questions-messaging-services-selection.json";
-import serviceBusQuestions from "../questions/questions-service-bus.json";
-import storageAccountQuestions from "../questions/questions-storage-accounts.json";
-import storageQueueQuestions from "../questions/questions-storage-queues.json";
-import eventHubQuestions from "../questions/questions-event-hub.json";
 
-const Quiz = () => {
-  const initialQuizData = [
-    ...messagingServiceQuestions,
-    ...serviceBusQuestions,
-    ...storageAccountQuestions,
-    ...storageQueueQuestions,
-    ...eventHubQuestions,
-  ];
-
+const Quiz = ({ questions }) => {
   const [quizData, setQuizData] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState(
-    Array(quizData.length).fill(null)
+    Array(questions.length).fill(null)
   );
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
   useEffect(() => {
     // Shuffle the quiz data when the component mounts
-    const shuffledQuizData = shuffleArray(initialQuizData);
+    const shuffledQuizData = shuffleArray(questions);
     setQuizData(shuffledQuizData);
     setUserAnswers(Array(shuffledQuizData.length).fill(null));
-  }, []);
+  }, [questions]);
 
   const handleOptionChange = (e) => {
     const selectedOption = parseInt(e.target.value, 10);
