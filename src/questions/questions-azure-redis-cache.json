@@ -1,0 +1,218 @@
+[
+  {
+    "question": "What is caching and why should you do it?",
+    "options": [
+      "Caching reduces the storage costs associated with data storage.",
+      "Caching improves data durability and fault tolerance.",
+      "Caching stores data in-memory and in simple data structures making data read more performant and available.",
+      "Caching increases the network bandwidth of data transmission."
+    ],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What kind of data is best suited to be cached?",
+    "options": [
+      "Data that is accessed frequently and doesn't change often.",
+      "Data that is highly sensitive and requires encryption.",
+      "Data that is rarely accessed and frequently modified.",
+      "Data that is stored in relational databases."
+    ],
+    "correct_answer": "0",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is an invalidation policy?",
+    "options": [
+      "It is a rule that dictates how long a data should stay in the cache.",
+      "It is a rule that determines the encryption algorithm used for data in the cache.",
+      "It is a rule that specifies the compression method applied to cached data.",
+      "It is a rule that defines the order in which data is stored in the cache."
+    ],
+    "correct_answer": "0",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What should be looked when defining an invalidation policy?",
+    "options": [
+      "Network bandwidth and latency.",
+      "Hardware resources and storage capacity.",
+      "Balance between performance and consistency.",
+      "Data availability and durability."
+    ],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is the suitable time to pre-populate a cache?",
+    "options": [
+      "After the first user request.",
+      "At regular intervals during peak usage hours.",
+      "When the cache is about to reach its capacity limit.",
+      "When the application starts."
+    ],
+    "correct_answer": "3",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What kind of data is best suited to be pre-populated in a cache?",
+    "options": [
+      "Data that frequently changes and requires real-time updates.",
+      "Data that is only accessed by a specific user group.",
+      "Data that is already stored in a separate database.",
+      "Data that almost never changes."
+    ],
+    "correct_answer": "3",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What formats of data can be stored in Redis cache?",
+    "options": [
+      "Numeric values, booleans, and timestamps",
+      "Binary files, documents, and images",
+      "Strings, Hashes, Lists and Sets",
+      "XML, JSON, CSV, and YAML"
+    ],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is the Geo Replication feature for Redis?",
+    "options": [
+      "It allows caching data from geographically dispersed users for faster access.",
+      "It enables replication between Redis caches within the same datacenter.",
+      "It provides real-time synchronization of cache data across multiple regions.",
+      "It allows replicate the cache in other datacenters. There is only one writable node and synchronization is automatic."
+    ],
+    "correct_answer": "3",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is the benefit of using Redis Cluster?",
+    "options": [
+      "It enables seamless integration with other Azure services.",
+      "It provides advanced security features for cache data.",
+      "It increases the amount of storage memory, throughput, and availability.",
+      "It offers automated backup and restore capabilities."
+    ],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "In the Redis cluster, increasing the amount of instances will increase the amount of connections?",
+    "options": ["False", "True"],
+    "correct_answer": "0",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is particular about Sets data in Redis?",
+    "options": [
+      "They maintain the insertion order of elements",
+      "They can store values of any data type",
+      "They can only contain unique items",
+      "They allow nesting of data structures"
+    ],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is particular about Lists data in Redis?",
+    "options": [
+      "They are ordered based when data was inserted.",
+      "They can only contain unique elements.",
+      "They allow fast access and retrieval of random elements.",
+      "They automatically expire after a specified time."
+    ],
+    "correct_answer": "0",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is a shard in a Redis Cluster?",
+    "options": [
+      "It is an instance of Redis Cache in the cluster.",
+      "It is a partition of the dataset across multiple Redis nodes.",
+      "It is a separate backup node that holds a copy of the cache data.",
+      "It is a caching strategy used to distribute data evenly across multiple cache servers."
+    ],
+    "correct_answer": "1",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "Which tier allows the usage of a Redis Cluster?",
+    "options": ["Basic", "Standard", "Premium"],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "Which tier allows the usage of virtual networks?",
+    "options": ["Basic", "Standard", "Premium"],
+    "correct_answer": "2",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "In which places can a cache invalidation be implemented?",
+    "options": [
+      "In the application or in the cache itself",
+      "In the database or in the network infrastructure",
+      "In the front-end web server or in the load balancer",
+      "In the client-side JavaScript or in the browser cache"
+    ],
+    "correct_answer": "0",
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "In which places can a cache invalidation be executed?",
+    "options": [
+      "In the front-end web server or in the load balancer",
+      "In the application or in the cache itself",
+      "In the client-side JavaScript or in the browser cache",
+      "In the database or in the network infrastructure"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is an absolute expiration?",
+    "options": [
+      "It is a cache synchronization mechanism between multiple cache nodes.",
+      "It is a cache invalidation policy executed by the cache service that will remove the cache entry in the specified time.",
+      "It is a cache replacement algorithm based on the frequency of cache hits.",
+      "It is a cache eviction policy that removes the least recently used cache entry."
+    ],
+    "correct_answer": 1,
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "What is a sliding expiration?",
+    "options": [
+      "It is a cache synchronization mechanism between multiple cache nodes.",
+      "It is a cache invalidation policy executed by the cache service that will remove the cache entry if the entry hasn't been touched for some time.",
+      "It is a cache replacement algorithm based on the size of the cache entry.",
+      "It is a cache eviction policy that removes the cache entry with the highest expiration time."
+    ],
+    "correct_answer": 1,
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "When is a suitable time to invalidate a cache entry in the application?",
+    "options": [
+      "When the cache utilization exceeds a certain threshold.",
+      "When the cache expires based on a predetermined time interval.",
+      "When a specific user requests a cache refresh.",
+      "When the data is updated or deleted from the database."
+    ],
+    "correct_answer": 3,
+    "category": "Azure Redis Cache"
+  },
+  {
+    "question": "How to implement session state with Redis?",
+    "options": [
+      "By storing session data in a separate database.",
+      "By replacing the default session state provider with the Redis session state provider.",
+      "By using cookies to manage session state.",
+      "By encrypting session data before storing it in the cache."
+    ],
+    "correct_answer": 1,
+    "category": "Azure Redis Cache"
+  }
+]

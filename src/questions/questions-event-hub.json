@@ -169,5 +169,182 @@
     "options": ["True", "False"],
     "correct_answer": 0,
     "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is a partition in Azure Event Hubs?",
+    "options": [
+      "A specific subset of a message stream",
+      "An unordered sequence of events",
+      "A parallelism technique for event producers",
+      "A data organization method for Azure Event Hubs"
+    ],
+    "correct_answer": "0",
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the purpose of partitions in Azure Event Hubs?",
+    "options": [
+      "To restrict access to event consumers",
+      "To ensure event ordering within a partition",
+      "To enable parallelism for event consumers",
+      "To limit the number of events in a message stream"
+    ],
+    "correct_answer": "2",
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "Can the number of partitions in an Event Hub be changed after creation?",
+    "options": [
+      "Yes, it can be increased or decreased anytime",
+      "No, it is fixed at the time of creation",
+      "Only if all consumers are stopped",
+      "It depends on the Azure subscription plan"
+    ],
+    "correct_answer": "1",
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the recommended best practice for using Event Hubs client types in an application?",
+    "options": [
+      "Create a new client instance for each event operation",
+      "Cache and use a single client instance throughout the application",
+      "Use a client pool to manage multiple client instances",
+      "Use a client factory to create client instances on demand"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the purpose of calling CloseAsync or DisposeAsync on an Event Hubs client?",
+    "options": [
+      "To force a reconnect to the Event Hubs service",
+      "To optimize network, CPU, and memory usage",
+      "To clear the event history from the client",
+      "To release managed resources and clean up unmanaged objects"
+    ],
+    "correct_answer": 3,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "When sending a batch of events to an Event Hub what is the maximum size that can be accepted?",
+    "options": ["numberOfEvents * 256 KB", "256KB", "1 MB", "No limit"],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the responsibility of the developer when using ProcessEventsAsync in EventProcessorHost?",
+    "options": [
+      "Handling the delivered collection of events",
+      "Implementing keep retrying code for message processing",
+      "Preventing the occurrence of poisoned messages",
+      "Writing custom consumer groups for message processing"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the recommended approach for efficient processing using consumer groups in EventProcessorHost?",
+    "options": [
+      "Perform extensive processing for each message",
+      "Use multiple consumer groups and separate IEventProcessor implementations",
+      "Write your own storage and routing mechanisms",
+      "Rely solely on the EventProcessorHost for message processing"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How does EventProcessorHost simplify keeping track of message processing progress?",
+    "options": [
+      "By using custom tracking mechanisms",
+      "By relying on the ProcessEventsAsync method",
+      "By calling the CheckpointAsync method on the PartitionContext object",
+      "By using checkpoints in the consumer group"
+    ],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the mechanism that controls the balancing of load and ownership of partitions?",
+    "options": [
+      "Checkpoint Store",
+      "Load balancer",
+      "Azure AD",
+      "Azure Configuration"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the max number of consumer groups can be created for an event hub?",
+    "options": ["5", "20", "10", "1"],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the recommended practice when creating consumer groups for an event hub?",
+    "options": [
+      "It should have 1 active connection per partition per consumer group.",
+      "It should have 1 consumer group for all partitions and active connection.",
+      "It should have 5 active connections per partition per consumer group"
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the benefit of creating multiple consumer groups for an event hub?",
+    "options": [
+      "It has no benefits.",
+      "It allows to organize code.",
+      "It allow complete parallel consumption of partition events.",
+      "It blocks complete parallel consumption of partition events."
+    ],
+    "correct_answer": 2,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "The Event Processor Host abstracts away the syncronization of partition consumers and offset management.",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "Offset is a measure of the events that has already been processed in each partition and is tracked in an azure blob storage.",
+    "options": ["True", "False"],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What should be done to implement and use a custom offset management instead of using an azure blob storage",
+    "options": [
+      "It is not possible since the processor handles it by itself.",
+      "Developer should implement ICheckpointManager and ILeaseManager Interfaces and pass it in the processor constructor.",
+      "Developer should pass the url of the endpoint that will store the checkpoints through the connection string",
+      "It needs to implement the ICustomCheckpointManager interface and supply through property injection"
+    ],
+    "correct_answer": 1,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "How is the order of events can be ensured?",
+    "options": [
+      "It is not possible to guarantee order in event hubs.",
+      "By stating the partition id when sending the events.",
+      "Nothing needs to be done, it only needs to read from each partition in sequence.",
+      "By setting the partition key when sending the events. Event Hub will assign one partition and put all events with the same key in there."
+    ],
+    "correct_answer": 3,
+    "category": "Azure Event Hub"
+  },
+  {
+    "question": "What is the purpose of the Event Hub Capture feature?",
+    "options": [
+      "It enables delivering of streaming data in event hubs to an Azure Blob Storage or Azure Data Lake Store",
+      "It enables event hub readers to store the data they read",
+      "It enables event hub save streaming data in SQL Server",
+      "It enables delivering of streaming data in batches called snapshots."
+    ],
+    "correct_answer": 0,
+    "category": "Azure Event Hub"
   }
 ]
